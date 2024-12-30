@@ -6,11 +6,11 @@ import { connectDB } from "./config/db.js";
 
 const app = express();
 
-app.use("/api/v1/auth", authRoutes);
-
 const PORT = ENV_VARS.PORT;
 
-app.use(express.json);
+app.use(express.json());
+
+app.use("/api/v1/auth", authRoutes);
 
 console.log("Mongo URI: ", ENV_VARS.MONGO_URI);
 
