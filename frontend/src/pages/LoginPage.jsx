@@ -10,7 +10,7 @@ const LoginPage = () => {
     console.log(email, password);
   };
   return (
-    <div className="h-screen w-full hero-bg">
+    <div className="h-screen w-full hero-bg bg-no-repeat bg-cover">
       <header className="max-w-6xl mx-auto flex items-center justify-between p-4">
         <Link to={"/"}>
           <img src="/netflix-logo.png" alt="logo" className="w-52" />
