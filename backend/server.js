@@ -7,6 +7,7 @@ import { connectDB } from "./config/db.js";
 import tvRoutes from "./routes/tvRoutes.js";
 import cookieParser from "cookie-parser";
 import { protectRoutes } from "./middleware/protectRoutes.js";
+import searchRoutes from "./routes/searchRoutes.js";
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(cookieParser());
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/movie", protectRoutes, movieRoutes);
 app.use("/api/v1/tv", protectRoutes, tvRoutes);
+app.use("/api/v1/search", protectRoutes, searchRoutes);
 
 app.listen(PORT, () => {
   console.log("Server started at http://localhost:" + PORT);
