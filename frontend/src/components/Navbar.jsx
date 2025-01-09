@@ -4,7 +4,7 @@ import { LogOut, Menu, Search } from "lucide-react";
 import { useAuthStore } from "../store/authUser";
 import { useContentStore } from "../store/content";
 
-const NavBar = () => {
+const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { user, logout } = useAuthStore();
 
@@ -94,4 +94,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
